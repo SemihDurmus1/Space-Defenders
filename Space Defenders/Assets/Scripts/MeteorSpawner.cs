@@ -16,10 +16,10 @@ public class MeteorSpawner : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
-        InvokeRepeating("SpawnMeteor", 1.5f, spawnRate);
+        InvokeRepeating("StartSpawn", 1.5f, spawnRate);
     }
 
-    void SpawnMeteor()
+    void StartSpawn()
     {
         // Ekranýn yatay boyutlarýný alýn
         float horizontalSize = mainCamera.orthographicSize * mainCamera.aspect;

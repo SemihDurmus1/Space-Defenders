@@ -6,7 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 public class MeteorManager : MonoBehaviour
 {
     public Animator animator;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
 
 
   
@@ -17,8 +17,7 @@ public class MeteorManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("çarptý");
-        if (collision.name == "Kale")
+        if (collision.CompareTag("Player"));
         {
             rb.velocity = Vector2.zero;
             animator.SetBool("Carpti", true);
