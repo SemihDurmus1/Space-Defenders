@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MermiManager : MonoBehaviour
@@ -12,7 +10,7 @@ public class MermiManager : MonoBehaviour
     private void Start()
     {
         rb.velocity = this.transform.up * speed;
-        MeteorManager meteorManager = new MeteorManager();
+       
 
         Invoke("Destroy", 1f);
     }

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class MeteorManager : MonoBehaviour
 {
@@ -17,7 +14,7 @@ public class MeteorManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"));
+        if (collision.CompareTag("Mermi") || collision.CompareTag("Player"))
         {
             rb.velocity = Vector2.zero;
             animator.SetBool("Carpti", true);
