@@ -72,7 +72,7 @@ public class MeteorSpawner : MonoBehaviour
     {
         Vector3 targetPosition = Vector3.zero; // Ekranýn merkezi (kale konumu)
         Rigidbody2D rb = meteor.GetComponent<Rigidbody2D>();
-        rb.velocity = (targetPosition - spawnPosition).normalized * Random.Range(3f, 8f);
+        rb.velocity = (targetPosition - spawnPosition).normalized * Random.Range(2f, 5f);
     }
 
     private void RotateToCastle(GameObject meteor)
