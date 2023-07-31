@@ -46,7 +46,7 @@ public class LoginManager : MonoBehaviour
 
     private static void LoginYaz(int count)
     {
-        StreamWriter sw = new StreamWriter("loginCount.txt");
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/loginCount.txt");
         sw.Write(count);
         sw.Close();
     }
@@ -55,22 +55,22 @@ public class LoginManager : MonoBehaviour
     {
         DosyaYoksaOlustur();
 
-        StreamReader sr = new StreamReader("loginCount.txt");
+        StreamReader sr = new StreamReader(Application.persistentDataPath + "/loginCount.txt");
         string veri = sr.ReadLine();
         sr.Close();
         if (veri != null) { return veri; }
         else
         {
             LoginYaz(1);
-            return "0";
+            return "1";
         }
     }
 
     private static void DosyaYoksaOlustur()
     {
-        if (!File.Exists("loginCount.txt"))
+        if (!File.Exists(Application.persistentDataPath + "/loginCount.txt"))
         {
-            FileStream fs = File.Create("loginCount.txt");
+            FileStream fs = File.Create(Application.persistentDataPath + "/loginCount.txt");
             fs.Close();
         }
     }
@@ -78,9 +78,9 @@ public class LoginManager : MonoBehaviour
 
     private static void DosyaYoksaOlusturDate()
     {
-        if (!File.Exists("loginDate.txt"))
+        if (!File.Exists(Application.persistentDataPath + "/loginDate.txt"))
         {
-            FileStream fs = File.Create("loginDate.txt");
+            FileStream fs = File.Create(Application.persistentDataPath + "/loginDate.txt");
             fs.Close();
         }
     }
@@ -89,7 +89,7 @@ public class LoginManager : MonoBehaviour
     {
         DosyaYoksaOlusturDate();
 
-        StreamReader srDate = new StreamReader("loginDate.txt");
+        StreamReader srDate = new StreamReader(Application.persistentDataPath + "/loginDate.txt");
         string veriDate = srDate.ReadLine();
         srDate.Close();
         if (veriDate != null) { return veriDate; }
@@ -103,7 +103,7 @@ public class LoginManager : MonoBehaviour
 
     private static void DateYaz()
     {
-        StreamWriter swDate = new StreamWriter("loginDate.txt");
+        StreamWriter swDate = new StreamWriter(Application.persistentDataPath + "/loginDate.txt");
         swDate.Write(DateTime.Today.Day);
         swDate.Close();
     }

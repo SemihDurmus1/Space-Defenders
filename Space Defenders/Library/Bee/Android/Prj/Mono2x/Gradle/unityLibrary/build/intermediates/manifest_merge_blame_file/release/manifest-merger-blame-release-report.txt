@@ -6,7 +6,7 @@
 6    android:versionName="1.0" >
 7
 8    <uses-sdk
-9        android:minSdkVersion="22"
+9        android:minSdkVersion="26"
 9-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
 10        android:targetSdkVersion="30" />
 10-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
@@ -47,15 +47,15 @@
 28            android:name="com.unity3d.player.UnityPlayerActivity"
 28-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:15-68
 29            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-29-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:188-369
+29-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:185-366
 30            android:hardwareAccelerated="false"
-30-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:405-440
+30-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:402-437
 31            android:launchMode="singleTask"
-31-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:156-187
+31-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:153-184
 32            android:resizeableActivity="false"
-32-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:370-404
-33            android:screenOrientation="reverseLandscape"
-33-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:111-155
+32-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:367-401
+33            android:screenOrientation="userLandscape"
+33-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:111-152
 34            android:theme="@style/UnityThemeSelector" >
 34-->C:\UnityGames\UnityGitHub\Space-Defenders\Space Defenders\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:69-110
 35            <intent-filter>

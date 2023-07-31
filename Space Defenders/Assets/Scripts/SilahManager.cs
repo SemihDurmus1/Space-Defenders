@@ -18,30 +18,15 @@ public class SilahManager : MonoBehaviour
     {
         FollowMouse();
 
-        if (Application.platform == RuntimePlatform.Android)
+        if (Input.touchCount > 0)
         {
-            if (Input.touchCount > 0)
-            {
-                Touch touch = Input.GetTouch(0);
+            Touch touch = Input.GetTouch(0);
 
-                Vector3 touchPosition = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10f));
+            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10f));
 
-                Instantiate(mermiPrefab, firePoint.position, firePoint.rotation);
+            Instantiate(mermiPrefab, firePoint.position, firePoint.rotation);
 
-                //skorManager.skor++;
-            }
         }
-
-        if (Input.GetMouseButton(0))
-        {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
-
-            // Mermi objesini oluþtur ve hedefe doðru gönder
-            GameObject bullet = Instantiate(mermiPrefab, transform.position, Quaternion.identity);
-            Vector3 direction = (mousePosition - transform.position).normalized;
-            bullet.GetComponent<Rigidbody2D>().velocity = direction * 1;
-        }
-
     }
 
     void FollowMouse()

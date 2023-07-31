@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public GameObject panelPause;
+    [SerializeField]GameObject panelPause;
 
 
     public void Exit()

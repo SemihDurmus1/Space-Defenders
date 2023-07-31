@@ -159,25 +159,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4830}
     - Class: 114
-      Script: {instanceID: 5644}
+      Script: {instanceID: 4892}
     - Class: 114
-      Script: {instanceID: 5952}
+      Script: {instanceID: 5646}
     - Class: 114
-      Script: {instanceID: 6308}
+      Script: {instanceID: 5954}
     - Class: 114
-      Script: {instanceID: 6502}
+      Script: {instanceID: 6296}
     - Class: 114
-      Script: {instanceID: 6882}
+      Script: {instanceID: 6312}
     - Class: 114
-      Script: {instanceID: 7206}
+      Script: {instanceID: 6506}
     - Class: 114
-      Script: {instanceID: 8062}
+      Script: {instanceID: 6886}
     - Class: 114
-      Script: {instanceID: 8482}
+      Script: {instanceID: 7210}
     - Class: 114
-      Script: {instanceID: 30776}
+      Script: {instanceID: 8066}
     - Class: 114
-      Script: {instanceID: 39616}
+      Script: {instanceID: 8486}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -673,6 +673,12 @@ ScriptsOnlyBuild:
     className: AnimatedTile
   - hash:
       serializedVersion: 2
+      Hash: cc63cb21d2e9d1a7b27956fdb7e40d3d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -821,6 +827,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.State.dll
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
+  - hash:
+      serializedVersion: 2
+      Hash: a9a00ad78022a99693841c5618887346
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CanManager
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -1157,19 +1169,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: cc63cb21d2e9d1a7b27956fdb7e40d3d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ButtonManager
-  - hash:
-      serializedVersion: 2
-      Hash: a9a00ad78022a99693841c5618887346
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CanManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/muham/Desktop/Space Defenders Android.apk
+  playerPath: C:/Users/muham/Desktop/Deneme/SpaceDefenders.apk

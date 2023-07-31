@@ -48,7 +48,7 @@ public class MeteorManager : MonoBehaviour
 
     private void SkorVer()
     {
-        skorManager.skor += 0.5f;
+        skorManager.skor += 1f;
     }
 
     public void DestroyMeteor()
