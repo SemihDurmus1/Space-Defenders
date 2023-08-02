@@ -9,16 +9,36 @@ public class MeteorSpawner : MonoBehaviour
 
     public GameObject kale;
 
+    SkorManager skorManager;
+
     void Start()
     {
         mainCamera = Camera.main;
+
+        GameObject skorObjesi = GameObject.FindWithTag("Skor");
+        skorManager = skorObjesi.GetComponent<SkorManager>();
+
+
         InvokeRepeating("StartSpawn", 1.5f, spawnRate);
         InvokeRepeating("StartSpawnBottom", 2f, spawnRate);
     }
 
+
     //Top Spawner------------------------------------------------------------------------------------------
     void StartSpawn()
     {
+        if (skorManager.skor >= 50 && skorManager.skor < 100)
+        {
+            spawnRate = 0.7f;
+            CancelInvoke("StartSpawn");
+            InvokeRepeating("StartSpawn", 1f, spawnRate);
+        }
+        else if (skorManager.skor >= 200 && skorManager.skor < 250)
+        {
+            spawnRate = 0.3f;
+            CancelInvoke("StartSpawn");
+            InvokeRepeating("StartSpawn", 0.7f, spawnRate);
+        }
         // Ekranýn yatay boyutlarýný alýn
         float horizontalSize = mainCamera.orthographicSize * mainCamera.aspect;
         // Spawn edilecek meteorun x koordinatýný belirleyin
@@ -45,6 +65,18 @@ public class MeteorSpawner : MonoBehaviour
     //Bottom Spawner---------------------------------------------------------------------------------------
     void StartSpawnBottom()
     {
+        if (skorManager.skor >= 50 && skorManager.skor < 100)
+        {
+            spawnRate = 0.7f;
+            CancelInvoke("StartSpawnBottom");
+            InvokeRepeating("StartSpawnBottom", 1f, spawnRate);
+        }
+        else if (skorManager.skor >= 200 && skorManager.skor < 250)
+        {
+            spawnRate = 0.3f;
+            CancelInvoke("StartSpawnBottom");
+            InvokeRepeating("StartSpawnBottom", 0.7f, spawnRate);
+        }
         // Ekranýn yatay boyutlarýný alýn
         float horizontalSize = mainCamera.orthographicSize * mainCamera.aspect;
         // Spawn edilecek meteorun x koordinatýný belirleyin

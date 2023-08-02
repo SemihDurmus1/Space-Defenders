@@ -2928,5 +2928,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5758977903458003962, guid: ff1c522935bc1b0419f31d59a748f486, type: 3}
+      propertyPath: silah2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758977903458003962, guid: ff1c522935bc1b0419f31d59a748f486, type: 3}
+      propertyPath: silah3
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758977903458003962, guid: ff1c522935bc1b0419f31d59a748f486, type: 3}
+      propertyPath: silah4
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758977903458003962, guid: ff1c522935bc1b0419f31d59a748f486, type: 3}
+      propertyPath: fireRate
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758977903458003962, guid: ff1c522935bc1b0419f31d59a748f486, type: 3}
+      propertyPath: skorManager
+      value: 
+      objectReference: {fileID: 1365909069}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff1c522935bc1b0419f31d59a748f486, type: 3}

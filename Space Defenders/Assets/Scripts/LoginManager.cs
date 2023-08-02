@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoginManager : MonoBehaviour
 {
@@ -17,8 +18,6 @@ public class LoginManager : MonoBehaviour
 
         //DateOku();
         loginDate = Convert.ToInt16(DateOku());
-        Debug.Log("Current Date: " + currentDate);
-        Debug.Log("Last Login Date: " + loginDate);
 
 
         LoginSorgula();
@@ -26,7 +25,6 @@ public class LoginManager : MonoBehaviour
 
         if (loginDate != currentDate)
         {
-            Debug.Log("Login Count Sýfýrlandý.");
             LoginYaz(1);
             DateYaz();
         }
@@ -34,11 +32,10 @@ public class LoginManager : MonoBehaviour
 
     private void LoginSorgula()
     {
-        print("LogCount: " + loginCount);
         if (loginCount >= 3 && loginDate == currentDate)
         {
-            Debug.Log("Oyuna giremezsin");
-            Application.Quit();
+            //Application.Quit();
+            SceneManager.LoadScene(1);
         }
         loginCount++;
         LoginYaz(loginCount);
@@ -96,7 +93,6 @@ public class LoginManager : MonoBehaviour
         else
         {
             DateYaz();
-            Debug.Log("Dosya boþ olduðundan bugünün Datei Yazýldý: " + DateTime.Today.Day);
             return "0";
         }
     }

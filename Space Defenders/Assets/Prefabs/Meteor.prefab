@@ -112,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9, y: 8}
+  m_Size: {x: 13, y: 13}
   m_EdgeRadius: 0
 --- !u!50 &7213496109246083620
 Rigidbody2D:
@@ -148,10 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2133393813508089887}
-  skor: 0
-  skorManager: {fileID: 0}
-  canvas: {fileID: 0}
-  skorText: {fileID: 0}
 --- !u!95 &2133393813508089887
 Animator:
   serializedVersion: 5

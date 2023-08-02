@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/OyunaGiremezsin.unity
+    guid: a12782d0922222c4b990fd7b23afe2ea
   m_configObjects: {}

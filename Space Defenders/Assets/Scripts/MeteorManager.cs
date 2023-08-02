@@ -43,7 +43,7 @@ public class MeteorManager : MonoBehaviour
 
     private void HasarVer()
     {
-        canManager.can -= Random.Range(5, 15);
+        canManager.can -= Random.Range(5, 10);
     }
 
     private void SkorVer()
