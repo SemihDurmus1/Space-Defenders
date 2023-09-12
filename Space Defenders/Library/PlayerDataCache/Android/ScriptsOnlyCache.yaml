@@ -3,7 +3,6 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - ButtonManager
     - CanManager
-    - LoginManager
     - MermiManager
     - MeteorManager
     - MeteorSpawner
@@ -39,8 +38,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -229,8 +230,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6886}
     - Class: 114
       Script: {instanceID: 7210}
-    - Class: 114
-      Script: {instanceID: 8066}
     - Class: 114
       Script: {instanceID: 8486}
     - Class: 115
@@ -884,7 +883,7 @@ ScriptsOnlyBuild:
     className: StateGraphAsset
   - hash:
       serializedVersion: 2
-      Hash: a9a00ad78022a99693841c5618887346
+      Hash: d1db7baf3133b052d785a4279530bbee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CanManager
@@ -968,7 +967,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 30f3213a6e218a461fa00e428f22d3eb
+      Hash: 85804b80d355c0f2eb5193b5b7127423
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MeteorManager
@@ -1228,4 +1227,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/OyunaGiremezsin.unity
-  playerPath: C:/Users/muham/Desktop/Space Defenders Alpha/SpaceDefenders.apk
+  playerPath: C:/Users/muham/Desktop/SpaceDefenders.apk
