@@ -33,12 +33,32 @@ public class MeteorSpawner : MonoBehaviour
             CancelInvoke("StartSpawn");
             InvokeRepeating("StartSpawn", 1f, spawnRate);
         }
+        else if (skorManager.skor >= 100 && skorManager.skor < 150)
+        {
+            spawnRate = 0.6f;
+            CancelInvoke("StartSpawn");
+            InvokeRepeating("StartSpawn", 1f, spawnRate);
+        }
+        else if (skorManager.skor >= 150 && skorManager.skor < 200)
+        {
+            spawnRate = 0.5f;
+            CancelInvoke("StartSpawn");
+            InvokeRepeating("StartSpawn", 1f, spawnRate);
+        }
         else if (skorManager.skor >= 200 && skorManager.skor < 250)
+        {
+            spawnRate = 0.4f;
+            CancelInvoke("StartSpawn");
+            InvokeRepeating("StartSpawn", 1f, spawnRate);
+        }
+        else if (skorManager.skor >= 250)
         {
             spawnRate = 0.3f;
             CancelInvoke("StartSpawn");
-            InvokeRepeating("StartSpawn", 0.7f, spawnRate);
+            InvokeRepeating("StartSpawn", 1f, spawnRate);
         }
+
+
         // Ekranýn yatay boyutlarýný alýn
         float horizontalSize = mainCamera.orthographicSize * mainCamera.aspect;
         // Spawn edilecek meteorun x koordinatýný belirleyin
@@ -104,7 +124,7 @@ public class MeteorSpawner : MonoBehaviour
     {
         Vector3 targetPosition = Vector3.zero; // Ekranýn merkezi (kale konumu)
         Rigidbody2D rb = meteor.GetComponent<Rigidbody2D>();
-        rb.velocity = (targetPosition - spawnPosition).normalized * Random.Range(2f, 5f);
+        rb.velocity = (targetPosition - spawnPosition).normalized * Random.Range(2f, 4f);
     }
 
     private void RotateToCastle(GameObject meteor)

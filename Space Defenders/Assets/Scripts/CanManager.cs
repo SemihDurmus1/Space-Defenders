@@ -9,6 +9,7 @@ public class CanManager : MonoBehaviour
     public Text canText;
 
     public GameObject panelOyunBitti;
+    [SerializeField] Button buttonPause;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class CanManager : MonoBehaviour
         {
             can = 0;
             panelOyunBitti.SetActive(true);
+            buttonPause.gameObject.SetActive(false);
         }
     }
 }

@@ -4,13 +4,17 @@ using UnityEngine.UI;
 
 public class MeteorManager : MonoBehaviour
 {
-    public Animator animator;
+    [SerializeField] Animator animator;
+    [SerializeField] BoxCollider2D boxCollider;
     private Rigidbody2D rb;
 
     SkorManager skorManager;
     CanManager canManager;
+
     private void Start()
     {
+        boxCollider = GetComponent<BoxCollider2D>();
+
         rb = GetComponent<Rigidbody2D>();
 
         GameObject skorObjesi = GameObject.FindWithTag("Skor");
@@ -25,7 +29,10 @@ public class MeteorManager : MonoBehaviour
     {
         if (collision.CompareTag("Mermi"))
         {
+            boxCollider.enabled = false;
+
             rb.velocity = Vector2.zero;
+
             animator.SetBool("Carpti", true);
 
             Invoke("DestroyMeteor", 0.3f);
@@ -33,7 +40,10 @@ public class MeteorManager : MonoBehaviour
         }
         else if (collision.CompareTag("Player"))
         {
+            boxCollider.enabled = false;
+
             rb.velocity = Vector2.zero;
+
             animator.SetBool("Carpti", true);
 
             Invoke("DestroyMeteor", 0.3f);
