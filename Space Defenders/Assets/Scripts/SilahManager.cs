@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class SilahManager : MonoBehaviour
 {
-    public GameObject mermiPrefab;
+    [SerializeField] GameObject mermiPrefab;
     private Rigidbody2D rb;
 
-    public Transform firePoint;
+    [SerializeField] Transform firePoint;
+    [SerializeField] Transform joystick;
 
     SkorManager skorManager;
 
-    public float fireRate = 0.7f; // Her mermi spawn arasýnda geçmesi gereken süre (sn)
-    private float nextFireTime = 0f; // Bir sonraki mermi spawn zamaný
+    private Vector3 initialPosition;
+
+    private float fireRate = 0.7f; 
+    private float nextFireTime = 0f;
 
     private void Start()
     {
@@ -18,6 +21,8 @@ public class SilahManager : MonoBehaviour
 
         GameObject skorObjesi = GameObject.FindWithTag("Skor");
         skorManager = skorObjesi.GetComponent<SkorManager>();
+
+        initialPosition = joystick.position;
     }
 
     private void Update()
@@ -35,6 +40,12 @@ public class SilahManager : MonoBehaviour
                 nextFireTime = Time.time + fireRate; // Bir sonraki mermi spawn zamanýný güncelle
             }
         }
+        BoostFireRate();
+
+    }
+
+    private void BoostFireRate()
+    {
         if (skorManager.skor >= 10 && skorManager.skor < 20)
         {
             fireRate = 0.6f;
@@ -95,14 +106,21 @@ public class SilahManager : MonoBehaviour
         {
             fireRate = 0.01f;
         }
-
     }
 
     void FollowMouse()
     {
-        Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = rotation;
+        Vector3 offset = joystick.position - initialPosition;
+
+        float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+
+        //Aþaðýdaki kod, silahýn ekrana dokunulan yere dönmesini saðlýyor
+        //Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        //float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        //Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        //transform.rotation = rotation;
     }
 }

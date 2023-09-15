@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    [SerializeField]GameObject panelPause;
-
+    [SerializeField] GameObject panelPause;
+    [SerializeField] GameObject joystick;
 
     public void Exit()
     {
@@ -20,12 +20,14 @@ public class ButtonManager : MonoBehaviour
     {
         Time.timeScale = 0f;
 
+        joystick.SetActive(false);
         panelPause.SetActive(true);
     }
     public void Resume()
     {
         Time.timeScale = 1.0f;
 
+        joystick.SetActive(true);
         panelPause.SetActive(false);
     }
 }

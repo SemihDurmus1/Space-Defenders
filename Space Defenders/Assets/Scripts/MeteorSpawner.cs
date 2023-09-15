@@ -13,6 +13,8 @@ public class MeteorSpawner : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
+
         mainCamera = Camera.main;
 
         GameObject skorObjesi = GameObject.FindWithTag("Skor");
